@@ -1,6 +1,6 @@
 <template>
   <div class="hd-home">
-      <div class="home-first" :class="{hide:hide}">
+      <div class="home-first" >
       <div class="home-header">
           <div class="header-h1">
               <span class="h1-en">BGI·MARINE</span><br>
@@ -45,7 +45,7 @@
             <span class="iconfont icon-down-trangle"  :class="{light:num%3==2}"></span>
       </div>
       </div>
-      <div class="home-sec" :class="{show:hide}">
+      <div class="home-sec" >
           <div class="hd-center">
               <div class="hd-center-bg" v-show="showBg">
 
@@ -78,53 +78,53 @@
 
               </div>
 
-                <div class="hd-c-text hd-c-text-1"  v-show="showText">
+                <div class="hd-c-text hd-c-text-1"  v-show="showText1">
                     <span>打发我的伟大</span>
               </div>
-                              <div class="hd-c-text hd-c-text-2"  v-show="showText">
+                              <div class="hd-c-text hd-c-text-2"  v-show="showText1">
                     <span>打发我的伟大</span>
               </div>
-                              <div class="hd-c-text hd-c-text-3"  v-show="showText">
+                              <div class="hd-c-text hd-c-text-3"  v-show="showText2">
                     <span>打发我的伟大</span>
               </div>
-                  <div class="hd-c-text hd-c-text-4"  v-show="showText">
+                  <div class="hd-c-text hd-c-text-4"  v-show="showText8">
                     <span>打发我的伟大</span>
               </div>
-                              <div class="hd-c-text hd-c-text-5"  v-show="showText">
+                              <div class="hd-c-text hd-c-text-5"  v-show="showText9">
                     <span>打发我的伟大</span>
               </div>
 
-             <div class="hd-c-text hd-c-text-l1"  v-show="showText">
+             <div class="hd-c-text hd-c-text-l1"  v-show="showText3">
                     <span>打发我的伟</span>
               </div>
-               <div class="hd-c-text hd-c-text-l2"  v-show="showText">
+               <div class="hd-c-text hd-c-text-l2"  v-show="showText4">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-l3"  v-show="showText">
+               <div class="hd-c-text hd-c-text-l3"  v-show="showText5">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-l4"  v-show="showText">
+               <div class="hd-c-text hd-c-text-l4"  v-show="showText6">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-l5"  v-show="showText">
+               <div class="hd-c-text hd-c-text-l5"  v-show="showText7">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-l6"  v-show="showText">
+               <div class="hd-c-text hd-c-text-l6"  v-show="showText8">
                     <span>打发我的</span>
               </div>
-              <div class="hd-c-text hd-c-text-r1"  v-show="showText">
+              <div class="hd-c-text hd-c-text-r1"  v-show="showText3">
                     <span>打发我的</span>
               </div>
-                           <div class="hd-c-text hd-c-text-r2"  v-show="showText">
+                           <div class="hd-c-text hd-c-text-r2"  v-show="showText4">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-r3"  v-show="showText">
+               <div class="hd-c-text hd-c-text-r3"  v-show="showText5">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-r4"  v-show="showText">
+               <div class="hd-c-text hd-c-text-r4"  v-show="showText6">
                     <span>打发我的</span>
               </div>
-               <div class="hd-c-text hd-c-text-r5"  v-show="showText">
+               <div class="hd-c-text hd-c-text-r5"  v-show="showText8">
                     <span>打发我的</span>
               </div>
                
@@ -141,7 +141,7 @@
                 hide:true,
                 showBg:false,
                 showTrg:false,
-                showText:false,
+                showText1:false,
                 showBall:false,
                 showBalls:false
             };
@@ -166,6 +166,13 @@
                  setTimeout(()=>{
                     this.showBalls = true
                 },1000)  
+                setTimeout(()=>{
+                    for(let i = 1;i<=10;i++){
+                        setTimeout(()=>{
+                            this["showText"+i] = true
+                        },i*800)
+                    }
+                },3500)  
             }
         }
     }
@@ -174,13 +181,12 @@
 .hd-home{
     height: 100%;
     box-sizing: border-box;
-    overflow: hidden;
 }
 .home-first{
     height: 100%;
     padding-top: 60px;
-    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515519801721&di=4a01e793243ed115cd4b5cb8bd453e3c&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0144ca5943cf88a8012193a3ce0d5f.jpg") no-repeat;
-    background-size: 100% auto;
+    background: url("../assets/bg.jpg") no-repeat center center;
+    background-size: auto 100%;
     position: relative;
     top: 0;
     transition: top .5s;
@@ -279,7 +285,7 @@
 }
 .page-down{
     position: absolute;
-    bottom: 70px;
+    bottom: 20px;
     width: 100%;
     text-align: center;
     color: #aaa;
@@ -287,7 +293,7 @@
     .iconfont{
         font-size: 24px;
         &.light{
-            color: #fff;
+            color: #ddd;
         }
     }
     
@@ -377,7 +383,7 @@
     border-bottom: transparent 12px solid;
     border-left: transparent 12px solid;
     border-right: transparent 12px solid;
-    animation: opacity 1s linear;
+    animation: opacity 1.5s linear;
   
 }
 .hd-tra-1{
@@ -495,8 +501,8 @@
 			}
 			@keyframes slidown
 			{
-				from {height: 0;}
-				to {height:30px;}
+				from {opacity: 0;height: 0;}
+				to {opacity: 1;height:30px;}
 			}
 			@keyframes opacity
 			{
