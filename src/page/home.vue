@@ -39,25 +39,25 @@
           </span>
 
       </div>
-      <div class="page-down" @click="hide=true">
+      <div class="page-down" @click="showMore">
           <span class="iconfont icon-down-trangle " :class="{light:num%3==0}"></span><br>
            <span class="iconfont icon-down-trangle"  :class="{light:num%3==1}"></span><br>
             <span class="iconfont icon-down-trangle"  :class="{light:num%3==2}"></span>
       </div>
       </div>
-      <div class="home-sec" >
+      <div class="home-sec" v-show="showmore">
           <div class="hd-center">
               <div class="hd-center-bg" v-show="showBg">
 
               </div>
               <div class="hd-center-ball" v-show="showBall">
-                                     <div>打发我的<br>打发我的</div> 
+                                     <div>水产大数据<br>中心</div> 
               </div>
               <div class="hd-center-ball-l" v-show="showBalls">
-                    <div>打发我的<br>打发我的</div>
+                    <div>数据输入<br>与维护</div>
               </div>
                <div class="hd-center-ball-r" v-show="showBalls">
-                    <div>打发我的</div>
+                    <div>增值服务</div>
               </div>
               <div class="hd-tra hd-tra-1" v-show="showTrg">
 
@@ -79,58 +79,179 @@
               </div>
 
                 <div class="hd-c-text hd-c-text-1"  v-show="showText1">
-                    <span>打发我的伟大</span>
+                    <span>数据存储中心</span>
               </div>
                               <div class="hd-c-text hd-c-text-2"  v-show="showText1">
-                    <span>打发我的伟大</span>
+                    <span>样本保存中心</span>
               </div>
                               <div class="hd-c-text hd-c-text-3"  v-show="showText2">
-                    <span>打发我的伟大</span>
+                    <span>活体展示中心</span>
               </div>
                   <div class="hd-c-text hd-c-text-4"  v-show="showText8">
-                    <span>打发我的伟大</span>
+                    <span>计算机硬件</span>
               </div>
                               <div class="hd-c-text hd-c-text-5"  v-show="showText9">
-                    <span>打发我的伟大</span>
+                    <span>运营支持团队</span>
               </div>
 
              <div class="hd-c-text hd-c-text-l1"  v-show="showText3">
-                    <span>打发我的伟</span>
+                    <span>生物学数据</span>
               </div>
                <div class="hd-c-text hd-c-text-l2"  v-show="showText4">
-                    <span>打发我的</span>
+                    <span>养殖数据</span>
               </div>
                <div class="hd-c-text hd-c-text-l3"  v-show="showText5">
-                    <span>打发我的</span>
+                    <span>市场数据</span>
               </div>
                <div class="hd-c-text hd-c-text-l4"  v-show="showText6">
-                    <span>打发我的</span>
+                    <span>组学数据</span>
               </div>
                <div class="hd-c-text hd-c-text-l5"  v-show="showText7">
-                    <span>打发我的</span>
+                    <span>种业数据</span>
               </div>
                <div class="hd-c-text hd-c-text-l6"  v-show="showText8">
-                    <span>打发我的</span>
+                    <span>产业数据</span>
               </div>
               <div class="hd-c-text hd-c-text-r1"  v-show="showText3">
-                    <span>打发我的</span>
+                    <span>数据查询</span>
               </div>
                            <div class="hd-c-text hd-c-text-r2"  v-show="showText4">
-                    <span>打发我的</span>
+                    <span>数据分析</span>
               </div>
                <div class="hd-c-text hd-c-text-r3"  v-show="showText5">
-                    <span>打发我的</span>
+                    <span>技术服务</span>
               </div>
                <div class="hd-c-text hd-c-text-r4"  v-show="showText6">
-                    <span>打发我的</span>
+                    <span>市场趋势分析</span>
               </div>
                <div class="hd-c-text hd-c-text-r5"  v-show="showText8">
-                    <span>打发我的</span>
+                    <span>产业发展咨询</span>
               </div>
                
           </div>
           
       </div>
+      <div class="center-tips"  v-show="showmore">
+          <div class="tip-top">水产生物大数据</div>
+          <div><span class="tips-div"></span></div>
+          <div  class="tips-c">
+              <span>逐步收集并完善水产生物的生物学数据、组学数据、养殖数据、种业数据、市场数据和产业数据，通过水产大数据中心的分析运行，实现
+             数据查询、数据分析、技术服务、市场趋势分析和产业发展咨询等增值服务。</span>
+          </div>
+      </div>
+      <div  v-show="showmore">
+            <div class="center-btns">
+                <span>点击查看数据库</span>
+            </div>    
+      </div>
+      <div class="footer"  v-show="showmore">
+          <div class="footer-l">
+              <div class="footer-ul">
+                  <div class="ul-title">关于我们</div>
+                   <ul>
+                  
+                  <li>
+                      <a href="javascript:;">企业简介</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">企业文化</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">专业论著</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">专家介绍</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">招聘</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">新闻资讯</a>
+                  </li>
+              </ul>
+              
+              </div>
+              <div class="footer-ul">
+                  <div class="ul-title">核心优势领域</div>
+                   <ul>
+                  
+                  <li>
+                      <a href="javascript:;">分子育种</a>
+                  </li>
+                   <li>
+                      <a href="javascript:;">立体循环水生态养殖</a>
+                  </li>
+                    <li>
+                      <a href="javascript:;">深加工</a>
+                  </li>
+                  
+              </ul>
+              
+              </div>
+                            <div class="footer-ul">
+                  <div class="ul-title">业务模块</div>
+                   <ul>
+                  
+                  <li>
+                      <a href="javascript:;">育种与种业</a>
+                  </li>
+                   <li>
+                      <a href="javascript:;">国内外贸易</a>
+                  </li>
+              </ul>
+              
+              </div>
+                            <div class="footer-ul">
+                  <div class="ul-title">水产品研发及精准营养</div>
+                   <ul>
+                  
+                  <li>
+                      <a href="javascript:;">热销商品</a>
+                  </li>
+                   <li>
+                      <a href="javascript:;">鲜活产品</a>
+                  </li>
+                    <li>
+                      <a href="javascript:;">深加工产品</a>
+                  </li>
+                  
+              </ul>
+              
+              </div>
+                            <div class="footer-ul">
+                  <div class="ul-title">大数据</div>
+                   <ul>
+                  
+                  
+              </ul>
+              
+              </div>
+          </div>
+          <div class="footer-r">
+              <div class="top">
+                <div>
+                    <span>
+
+                    </span>
+                    <span>
+                        BGI·MARINE<br>
+                        华大海洋
+                    </span>
+                </div>      
+              </div>
+              <div class="bottom">
+                <div>
+                    <div>FAX:0755-36352508</div>
+                    <div>TEL:0755-36307296</div>
+                    <div>ADD:深圳市盐田区北山工业区136号华大基因11栋</div>
+                </div>      
+              </div>
+          </div>
+          <div class="footer-div">
+          <span></span>
+      </div>
+      </div>
+      
   </div>
 </template>
 <script>
@@ -142,17 +263,46 @@
                 showBg:false,
                 showTrg:false,
                 showText1:false,
+                showText2:false,
+                showText3:false,
+                showText4:false,
+                showText5:false,
+                showText6:false,
+                showText7:false,
+                showText8:false,
+                showText9:false,
+                showText10:false,
                 showBall:false,
-                showBalls:false
+                showBalls:false,
+                showmore:false
             };
         },
         mounted () {
             setInterval(()=>{
                 this.num++
+                if(this.num>=3){
+                    this.num=0
+                }
             },500)
-            this.setAnimation()
+            //this.setAnimation()
         },
         methods : {
+            showMore(){
+                this.showmore = true;
+                this.$nextTick(()=>{
+                    let height = document.body.clientHeight;
+                    for(let i =1;i<=50;i++){
+                        setTimeout(()=>{
+                             document.body.scrollTop = height*i/50
+                        },i*2)
+                        
+                    }
+                    setTimeout(()=>{
+                            this.setAnimation()
+                        },100)           
+                })
+                
+            },
             setAnimation(){
                 setTimeout(()=>{
                     this.showBg = true
@@ -170,9 +320,9 @@
                     for(let i = 1;i<=10;i++){
                         setTimeout(()=>{
                             this["showText"+i] = true
-                        },i*800)
+                        },i*600)
                     }
-                },3500)  
+                },3000)  
             }
         }
     }
@@ -181,6 +331,7 @@
 .hd-home{
     height: 100%;
     box-sizing: border-box;
+    font-family: "宋体";
 }
 .home-first{
     height: 100%;
@@ -225,6 +376,7 @@
 .home-nav{
     width: 1200px;
     margin: 60px auto;
+    font-size: 14px;
 }
 .hd-nav-ul{
     background: #004a64;
@@ -492,13 +644,94 @@
     top: 430px;
     left: 400px;
 }
+.tip-top{
+    text-align: center;
+    font-size: 16px;
+}
+.center-tips{
+    text-align: center;
+}
+.tips-div{
+    height: 1px;
+    display: inline-block;
+    width: 25px;
+    background: #004962;
+    margin: 15px 0 0;
+}
+.tips-c{
+    font-size: 18px;
+    span{
+        transform: scale(.5 ,.5);
+        display: inline-block;
+        width: 1000px;
+    }
+}
+.center-btns{
+    text-align: center;
+    padding: 60px;
+    span{
+        display: inline-block;
+        padding: 4px 20px;
+        border: solid 1px #666;
+        font-size: 14px;
+    }
+}
+.footer{
+    background: #0a5b78;
+    color: #fff;
+    height: 260px;
+    padding:0 260px; 
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    position: relative;
+}
+.footer-ul{
+    margin-top: 60px;
+    float: left;
+    transform: translate(-50px,-25%) scale(.5,.5);
+    .ul-title{
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    ul{
+        li{
+            list-style: none;
+            margin-bottom: 10px;
+        }
+    }
+}
+.footer-r{
+    position: absolute;
+    right: 200px;
+    margin-top: 30px;
+    text-align: right;
+    transform: scale(.5,.5) translate(50%,-25%);
+    .bottom{
+        margin-top: 140px
+    }
+}
+.footer-div{
+    position: absolute;
+    top: 210px;
+    width: calc(100% - 426px);
+    left: 226px;
+    padding: 0;
+    margin: 0;
+    span{
+        height: 1px;
+        display: block;
+        background: #fff;
+    }
+}
 </style>
 <style lang="scss">
 			@keyframes scale
 			{
 				from {transform: scale(.1,.1);}
 				to {transform: scale(1,1);}
-			}
+			} 
 			@keyframes slidown
 			{
 				from {opacity: 0;height: 0;}
