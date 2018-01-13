@@ -235,7 +235,7 @@
                     </span>
                     <span>
                         BGI·MARINE<br>
-                        华大海洋
+                        华大海洋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                 </div>      
               </div>
@@ -357,8 +357,11 @@
     margin: 0px auto 0;
 }
 .header-h1{
+    background: url(../assets/logo.png) no-repeat left;
+    background-size: auto 100%;
+    padding-left: 70px;
     display: inline-block;
-    margin-left: 550px;
+    margin-left: 480px;
     .h1-en{
         font-size: 18px;
     }
@@ -594,7 +597,7 @@
 }
 .hd-c-text-4{
     top: 430px;
-    left: 205px;
+    left: 215px;
 }
 .hd-c-text-5{
     top: 530px;
@@ -708,6 +711,9 @@
     margin-top: 30px;
     text-align: right;
     transform: scale(.5,.5) translate(50%,-25%);
+    .top{
+        background: url(../assets/logomultiply.png) no-repeat 200px;
+    }
     .bottom{
         margin-top: 140px
     }
